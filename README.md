@@ -174,7 +174,7 @@ The value of "N" must be incremental to the ones used in the already contributed
 <tr>
 <td><code>category</code></td>
 <td>One of this values: <code>Civic science</code>, <code>Crowd-sourcing</code>, <code>DIY engineering</code>, <code>Monitoring</code>, <code>Occasional reporting</code>, <code>Passive sensing</code>, <code>Volunteer computing</code></td>
-<td>The primary category of the project.</td>
+<td>The primary category of the project. The current categories have been derived from the study <a href="https://www.wilsoncenter.org/publication/citizen-science-and-policy-european-perspective"><em>Citizen Science and Policy: A European Perspective</em></a>.</td>
 </tr>
 <tr>
 <td><code>social_uptake</code></td>
