@@ -75,7 +75,7 @@
   $subsection["chart"]["10003"]["name"] = "Lead organization category";
   $subsection["chart"]["10003"]["icon"] = "fa-area-chart";
 //  $subsection["chart"]["10003"]["descr"] = "Type of organisation represented by the lead project partners. Hovering the mouse on an organization category, a tooltip shows the number of projects with lead partners that belong in this category.";
-  $subsection["chart"]["10003"]["descr"] = "Distrubtion of type of organisation represented by the lead project partners.";
+  $subsection["chart"]["10003"]["descr"] = "Distribution of type of organization represented by the lead project partners.";
 //  $subsection["chart"]["10003"]["url"] = $site_abs_path . "chart/10003.html";
 //  $subsection["chart"]["10003"]["path"] = $root_abs_path . "chart/10003.html";
 //  $subsection["chart"]["10003"]["data"] = $site_abs_path . $data_folder . "projects";
@@ -113,7 +113,7 @@
   $subsection["chart"]["10006"]["graph"] = '<perspective-viewer view="x_bar" row-pivots=\'["policy_relevance", "category"]\' sort=\'[["id", "asc"]]\' columns=\'["id"]\' id="chart-10006"></perspective-viewer>';
   $subsection["chart"]["10006"]["lib"] = 'perspective';
   
-  $subsection["chart"]["10007"]["name"] = "Social uptake vs. lead organisation category";
+  $subsection["chart"]["10007"]["name"] = "Social uptake vs. lead organization category";
   $subsection["chart"]["10007"]["icon"] = "fa-area-chart";
   $subsection["chart"]["10007"]["descr"] = "Joint visual representation of the project social uptake and the project lead partner category.";
 //  $subsection["chart"]["10007"]["url"] = $site_abs_path . "chart/10007.html";
