@@ -133,12 +133,12 @@ The value of "N" must be incremental to the ones used in the already contributed
 </tr>
 <tr>
 <td><code>lead_organization_category</code></td>
-<td>One of this values: <code>Academic</code>, <code>Consortium</code>, <code>Governmental</code>, <code>Non-governmental</code></td>
+<td>One of these values: <code>Academic</code>, <code>Consortium</code>, <code>Governmental</code>, <code>Non-governmental</code></td>
 <td>The category of the organization who led the project</td>
 </tr>
 <tr>
 <td><code>geoextent</code></td>
-<td>One of this values: <code>Global</code>, <code>Macro-regional</code>, <code>National</code>, <code>Sub-national</code>, <code>Regional</code>, <code>City</code>, <code>Neighborhood</code></td>
+<td>One of these values: <code>Global</code>, <code>Macro-regional</code>, <code>National</code>, <code>Sub-national</code>, <code>Regional</code>, <code>City</code>, <code>Neighborhood</code></td>
 <td>The spatial scale at which the project is implemented. Subnational is used as generic category for projects for which the sub-national scale is not known (i.e. regional, or city, or neighborhood). All regional, city and neighborhood projects are also sub-national projects.</td>
 </tr>
 <tr>
@@ -163,22 +163,22 @@ The value of "N" must be incremental to the ones used in the already contributed
 </tr>
 <tr>
 <td><code>environmental_domain</code></td>
-<td>One of this values: <code>Atmospheric</code>, <code>Cross-cutting</code>, <code>Freshwater</code>, <code>Marine</code>, <code>Terrestrial</code></td>
+<td>One of these values: <code>Atmospheric</code>, <code>Cross-cutting</code>, <code>Freshwater</code>, <code>Marine</code>, <code>Terrestrial</code></td>
 <td>The dominant environmental domain of research for this project.</td>
 </tr>
 <tr>
 <td><code>environmental_field</code></td>
-<td>One of this values: <code>Air quality</code>, <code>Animal welfare</code>, <code>Biodiversity, nature and landscapes</code>, <code>Climate</code>, <code>Cross-cutting</code>, <code>Efficient use of resources</code>, <code>Environmental health</code>, <code>Environmental risks</code>, <code>Land</code>, <code>Noise</code>, <code>Sustainable consumption and production</code>, <code>Waste</code>, <code>Water</code></td>
+<td>One of these values: <code>Air quality</code>, <code>Animal welfare</code>, <code>Biodiversity, nature and landscapes</code>, <code>Climate</code>, <code>Cross-cutting</code>, <code>Efficient use of resources</code>, <code>Environmental health</code>, <code>Environmental risks</code>, <code>Land</code>, <code>Noise</code>, <code>Sustainable consumption and production</code>, <code>Waste</code>, <code>Water</code></td>
 <td>The dominant environmental field tackled by the project activities.</td>
 </tr>
 <tr>
 <td><code>category</code></td>
-<td>One of this values: <code>Civic science</code>, <code>Crowd-sourcing</code>, <code>DIY engineering</code>, <code>Monitoring</code>, <code>Occasional reporting</code>, <code>Passive sensing</code>, <code>Volunteer computing</code></td>
+<td>One of these values: <code>Civic science</code>, <code>Crowd-sourcing</code>, <code>DIY engineering</code>, <code>Monitoring</code>, <code>Occasional reporting</code>, <code>Passive sensing</code>, <code>Volunteer computing</code></td>
 <td>The primary category of the project. The current categories have been derived from the study <a href="https://www.wilsoncenter.org/publication/citizen-science-and-policy-european-perspective"><em>Citizen Science and Policy: A European Perspective</em></a>.</td>
 </tr>
 <tr>
 <td><code>social_uptake</code></td>
-<td>One of this values: <code>Considerable</code>, <code>Large</code>, <code>Very large</code></td>
+<td>One of these values: <code>Considerable</code>, <code>Large</code>, <code>Very large</code></td>
 <td>
 <p>The level of social uptake of the project. It basically corresponds to the index of number of participants or followers. Based on expert
 knowledge:</p>
@@ -204,12 +204,12 @@ knowledge:</p>
 </tr>
 <tr>
 <td><code>policy_relevance</code></td>
-<td>One of this values: <code>Compliance assurance</code>, <code>Early-warning</code>, <code>Policy evaluation</code>, <code>Policy implementation or monitoring</code>, <code>Problem definition</code></td>
+<td>One of these values: <code>Compliance assurance</code>, <code>Early-warning</code>, <code>Policy evaluation</code>, <code>Policy implementation or monitoring</code>, <code>Problem definition</code></td>
 <td>Main phase of the policy cycle potentially impacted by the project actions.</td>
 </tr>
 <tr>
 <td><code>sdg1</code>, ..., <code>sdg17</code></td>
-<td>One of this values: <code>0</code> (No impact), <code>1</code> (Indirect impact), <code>2</code> (Direct impact)</td>
+<td>One of these values: <code>0</code> (No impact), <code>1</code> (Indirect impact), <code>2</code> (Direct impact)</td>
 <td>Level on impact on each of <a href="https://sustainabledevelopment.un.org/sdgs">the 17 UN Sustainable Development Goals</a>.</td>
 </tr>
 </tbody>
