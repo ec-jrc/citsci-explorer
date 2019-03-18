@@ -74,7 +74,7 @@
       $output[$k]["c_name"] = trim($v["c_name"]);
     }
     else {
-      echo "ERROR - Record " . $rn . ": Mandatory field missing: 'name'\n";
+      echo "ERROR - Record " . $rn . ": Mandatory field missing: 'c_name'\n";
       exit;
     }
     $output[$k]["c_url"] = $v["c_url"];
