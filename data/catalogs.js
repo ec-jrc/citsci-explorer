@@ -6,7 +6,7 @@ var catalogs = [
         "c_contact": "mailto:s.schade@ec.europa.eu",
         "c_description": "We publish here both the citizen science project inventory and the in-depth analysis data that resulted from this study.",
         "c_publisher": "European Commission, Joint Research Centre (JRC)",
-        "c_type": "Desktop research"
+        "c_type": "Desk research"
     },
     {
         "c_id": 10002,
