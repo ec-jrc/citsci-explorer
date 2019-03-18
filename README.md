@@ -174,7 +174,7 @@ The value of "N" must be incremental to the ones used in the already contributed
 <tr>
 <td><code>category</code></td>
 <td>One of this values: <code>Civic science</code>, <code>Crowd-sourcing</code>, <code>DIY engineering</code>, <code>Monitoring</code>, <code>Occasional reporting</code>, <code>Passive sensing</code>, <code>Volunteer computing</code></td>
-<td>TBD</td>
+<td>The primary category of the project.</td>
 </tr>
 <tr>
 <td><code>social_uptake</code></td>
@@ -186,7 +186,7 @@ knowledge:</p>
 <dt>Very large</dt>
 <dd>Large number of users, tradition, excellent projects with high numbers of users (above 1,000)</dd>
 <dt>Large</dt>
-<dd>EC-funded projects that we would say good in review and with medium number of users (below 1,000)</dd>
+<dd>Projects that we would say good in review and with medium number of users (below 1,000)</dd>
 <dt>Considerable</dt>
 <dd>All others</dd>
 </dl>
