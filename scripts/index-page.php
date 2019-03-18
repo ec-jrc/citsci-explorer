@@ -24,8 +24,8 @@
 <script src="http://jvectormap.com/js/jquery-jvectormap-2.0.3.min.js"></script>
 <script src="http://jvectormap.com/js/jquery-jvectormap-world-mill.js"></script>
 -->
-<script src="//jvectormap.com/js/jquery-jvectormap-2.0.3.min.js"></script>
-<script src="//jvectormap.com/js/jquery-jvectormap-world-mill.js"></script>
+<script src="<?php echo $site_abs_path; ?>js/jvectormap.com/js/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="<?php echo $site_abs_path; ?>js/jvectormap.com/js/jquery-jvectormap-world-mill.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="<?php echo $site_abs_path; ?>js/common.js"></script> 
 <style>
