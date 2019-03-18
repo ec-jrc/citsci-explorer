@@ -177,7 +177,7 @@ $(document).ready(function() {
 
   foreach ($geocoverage as $gk => $gc) {
     $html .= '    {"@type":"Place","name":"' . $gc . '"}';
-    if ($gk < count($geocoverage)) {
+    if ($gk < (count($geocoverage) - 1)) {
       $html .= ",\n";
     }
     else {
