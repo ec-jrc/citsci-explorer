@@ -15,9 +15,14 @@
   $input = array();
 
   foreach ($src["projects"] as $i => $file) {
-    $input = $input + json_decode(file_get_contents($norm_folder . basename($file, ".csv") . ".json"), true);
+//    $input = $input + json_decode(file_get_contents($norm_folder . basename($file, ".csv") . ".json"), true);
+    foreach (json_decode(file_get_contents($norm_folder . basename($file, ".csv") . ".json"), true) as $entry) {
+      $input[$entry["id"]] = $entry;
+    }
   }
-  
+
+  sort($input);
+
   echo "Creating file: " . $target_folder . $filename . ".json\n";
   if (file_put_contents($target_folder . $filename . ".json", json_encode($input, JSON_PRETTY_PRINT))) {
     echo "Done." . "\n\n";

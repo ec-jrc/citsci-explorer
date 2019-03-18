@@ -15,8 +15,13 @@
   $input = array();
 
   foreach ($src["catalog"] as $i => $file) {
-    $input = $input + json_decode(file_get_contents($norm_folder . basename($file, ".csv") . ".json"), true);
+//    $input = $input + json_decode(file_get_contents($norm_folder . basename($file, ".csv") . ".json"), true);
+    foreach (json_decode(file_get_contents($norm_folder . basename($file, ".csv") . ".json"), true) as $entry) {
+      $input[$entry["c_id"]] = $entry;
+    }
   }
+
+  sort($input);
   
   echo "Creating file: " . $target_folder . $filename . ".json\n";
   if (file_put_contents($target_folder . $filename . ".json", json_encode($input, JSON_PRETTY_PRINT))) {
