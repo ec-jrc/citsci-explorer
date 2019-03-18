@@ -171,7 +171,7 @@ $(document).ready(function() {
   "@id":"' . $baseuri . $id . '",
   "name":"' . $name . '",
   "url":"' . $url . '",
-  "description":"' . $description . '"
+  "description":"' . $description . '",
   "spatialCoverage":[
 ';
 
