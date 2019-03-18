@@ -109,7 +109,7 @@ The value of "N" must be incremental to the ones used in the already contributed
 <tr>
 <td><code>name</code></td>
 <td>free text</td>
-<td>The name/title of the project</td>
+<td>Name of the project/activity</td>
 </tr>
 <tr>
 <td><code>description</code></td>
@@ -129,7 +129,7 @@ The value of "N" must be incremental to the ones used in the already contributed
 <tr>
 <td><code>lead_organization_name</code></td>
 <td>free text</td>
-<td>The name of the organization who led the project</td>
+<td>Name of the lead partner. Local name, in native language.</td>
 </tr>
 <tr>
 <td><code>lead_organization_category</code></td>
@@ -138,13 +138,13 @@ The value of "N" must be incremental to the ones used in the already contributed
 </tr>
 <tr>
 <td><code>geoextent</code></td>
-<td>One of this values: <code>City</code>, <code>Global</code>, <code>Macro-regional</code>, <code>National</code>, <code>Neighborhood</code>, <code>Regional</code>, <code>Sub-national</code></td>
-<td>TBD</td>
+<td>One of this values: <code>Global</code>, <code>Macro-regional</code>, <code>National</code>, <code>Sub-national</code>, <code>Regional</code>, <code>City</code>, <code>Neighborhood</code></td>
+<td>The spatial scale at which the project is implemented. Subnational is used as generic category for projects for which the sub-national scale is not known (i.e. regional, or city, or neighborhood). All regional, city and neighborhood projects are also sub-national projects.</td>
 </tr>
 <tr>
 <td><code>geocoverage</code></td>
 <td>Comma-separated list of ISO 3166 country names</td>
-<td>The areas covered by the project, specified as a comma-separated list of country names. Country names MUST correspond to those defined in ISO 3166</td>
+<td>The areas covered by the project (typically corresponding to the countries involved in the project team/consortium), specified as a comma-separated list of country names. Country names MUST correspond to those defined in ISO 3166</td>
 </tr>
 <tr>
 <td><code>start_date</code></td>
@@ -164,12 +164,12 @@ The value of "N" must be incremental to the ones used in the already contributed
 <tr>
 <td><code>environmental_domain</code></td>
 <td>One of this values: <code>Atmospheric</code>, <code>Cross-cutting</code>, <code>Freshwater</code>, <code>Marine</code>, <code>Terrestrial</code></td>
-<td>The environmental domain for which this project is relevant</td>
+<td>The dominant environmental domain of research for this project.</td>
 </tr>
 <tr>
 <td><code>environmental_field</code></td>
 <td>One of this values: <code>Air quality</code>, <code>Animal welfare</code>, <code>Biodiversity, nature and landscapes</code>, <code>Climate</code>, <code>Cross-cutting</code>, <code>Efficient use of resources</code>, <code>Environmental health</code>, <code>Environmental risks</code>, <code>Land</code>, <code>Noise</code>, <code>Sustainable consumption and production</code>, <code>Waste</code>, <code>Water</code></td>
-<td>The environmental field for which this project is relevant</td>
+<td>The dominant environmental field tackled by the project activities.</td>
 </tr>
 <tr>
 <td><code>category</code></td>
@@ -179,7 +179,18 @@ The value of "N" must be incremental to the ones used in the already contributed
 <tr>
 <td><code>social_uptake</code></td>
 <td>One of this values: <code>Considerable</code>, <code>Large</code>, <code>Very large</code></td>
-<td>The level of social uptake of the project</td>
+<td>
+<p>The level of social uptake of the project. It basically corresponds to the index of number of participants or followers. Based on expert
+knowledge:</p>
+<dl>
+<dt>Very large</dt>
+<dd>Large number of users, tradition, excellent projects with high numbers of users (above 1,000)</dd>
+<dt>Large</dt>
+<dd>EC-funded projects that we would say good in review and with medium number of users (below 1,000)</dd>
+<dt>Considerable</dt>
+<dd>All others</dd>
+</dl>
+</td>
 </tr>
 <tr>
 <td><code>policy_uptake</code></td>
@@ -187,9 +198,14 @@ The value of "N" must be incremental to the ones used in the already contributed
 <td>Whether the project results have been or have been not used for policy making</td>
 </tr>
 <tr>
+<td><code>policy_uptake_explanation</code></td>
+<td>free text</td>
+<td>Brief explanation of why there is a policy uptake or no policy uptake, and which policies are impacted and how. Especially to be filled for cases where there is a policy uptake.</td>
+</tr>
+<tr>
 <td><code>policy_relevance</code></td>
 <td>One of this values: <code>Compliance assurance</code>, <code>Early-warning</code>, <code>Policy evaluation</code>, <code>Policy implementation or monitoring</code>, <code>Problem definition</code></td>
-<td>The policy area to which the project is relevant</td>
+<td>Main phase of the policy cycle potentially impacted by the project actions.</td>
 </tr>
 </tbody>
 </table>
