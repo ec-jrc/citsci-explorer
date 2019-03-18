@@ -1,0 +1,87 @@
+[
+ {
+   "code": "SDG1",
+   "name": "Poverty",
+   "url": "https://sustainabledevelopment.un.org/sdg1"
+ },
+ {
+   "code": "SDG2",
+   "name": "Food, sustainable agriculture",
+   "url": "https://sustainabledevelopment.un.org/sdg2"
+ },
+ {
+   "code": "SDG3",
+   "name": "Health and well-being",
+   "url": "https://sustainabledevelopment.un.org/sdg3"
+ },
+ {
+   "code": "SDG4",
+   "name": "Education",
+   "url": "https://sustainabledevelopment.un.org/sdg4"
+ },
+ {
+   "code": "SDG5",
+   "name": "Gender equality",
+   "url": "https://sustainabledevelopment.un.org/sdg5"
+ },
+ {
+   "code": "SDG6",
+   "name": "Water availability and sustainable management",
+   "url": "https://sustainabledevelopment.un.org/sdg6"
+ },
+ {
+   "code": "SDG7",
+   "name": "Energy affordable, reliable, sustainable",
+   "url": "https://sustainabledevelopment.un.org/sdg7"
+ },
+ {
+   "code": "SDG8",
+   "name": "Sustainable economic growth and employment",
+   "url": "https://sustainabledevelopment.un.org/sdg8"
+ },
+ {
+   "code": "SDG9",
+   "name": "Resilient infrastructure, innovation",
+   "url": "https://sustainabledevelopment.un.org/sdg9"
+ },
+ {
+   "code": "SDG10",
+   "name": "Reduce inequality",
+   "url": "https://sustainabledevelopment.un.org/sdg10"
+ },
+ {
+   "code": "SDG11",
+   "name": "Sustainable, resilient cities/settlements",
+   "url": "https://sustainabledevelopment.un.org/sdg11"
+ },
+ {
+   "code": "SDG12",
+   "name": "Sustainable consumption and production",
+   "url": "https://sustainabledevelopment.un.org/sdg12"
+ },
+ {
+   "code": "SDG13",
+   "name": "Action to combat climate change and its impacts",
+   "url": "https://sustainabledevelopment.un.org/sdg13"
+ },
+ {
+   "code": "SDG14",
+   "name": "Marine conservation and sustainable development",
+   "url": "https://sustainabledevelopment.un.org/sdg14"
+ },
+ {
+   "code": "SDG15",
+   "name": "Terrestrial biodiversity conservation, sustainable forest management and land use management",
+   "url": "https://sustainabledevelopment.un.org/sdg15"
+ },
+ {
+   "code": "SDG16",
+   "name": "Peace, justice for all",
+   "url": "https://sustainabledevelopment.un.org/sdg16"
+ },
+ {
+   "code": "SDG17",
+   "name": "Strengthen Global Partnership for Sustainable Development",
+   "url": "https://sustainabledevelopment.un.org/sdg17"
+ }
+]

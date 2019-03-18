@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CitSci-X | Sources</title>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="http://jiren.github.io/filter.js/assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://jiren.github.io/filter.js/assets/css/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/citsci-explorer/css/common.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/citsci-explorer/css/catalogs.css" media="screen" rel="stylesheet" type="text/css">
+<script src="http://jiren.github.io/filter.js/assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="http://jiren.github.io/filter.js/assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+<script src="http://jiren.github.io/filter.js/filter.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/citsci-explorer/js/common.js"></script>
+<script src="/citsci-explorer/data/catalogs.js" type="text/javascript"></script>
+<script src="/citsci-explorer/js/catalogs.js" type="text/javascript"></script>
+<style>
+  .panel-footer {font-size:.8em;}
+</style>
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default">
+<div class="container">
+<p class="navbar-header"><a class="navbar-brand" href="/citsci-explorer/">CitSci-X</a></p>
+<ul class="nav navbar-nav collapse navbar-collapse">
+<li class=""><a href="/citsci-explorer/project/">Projects</a></li>
+<li class=""><a href="/citsci-explorer/chart/">Gallery</a></li>
+<li class="active"><a href="/citsci-explorer/catalog/">Sources</a></li>
+</ul>
+<ul class="nav navbar-nav collapse navbar-collapse navbar-right">
+<li><a target="_blank" href="https://github.com/ec-jrc/citsci-explorer/" title="GitHub"><i class="fa fa-github"></i> About CitSci-X</a></li>
+</ul>
+</div>
+</nav>
+<!--
+<header class="page-header">
+  <div class="container">
+  <h1 class="title">CitSci-X</h1>
+  <p class="lead">Exploring Citizen Science projects</p>
+  </div>
+</header>
+-->    
+    <article class="container">
+      <aside class="sidebar col-md-3">
+        <div>
+          <h4 class='col-md-6'>Sources (<span id="total_catalogs">0</span>)</h4>
+        </div>
+        <div>
+          <label class="sr-only" for="searchbox">Search</label>
+          <input type="text" class="form-control" id="searchbox" placeholder="Search &hellip;" autocomplete="off">
+          <span class="glyphicon glyphicon-search search-icon"></span>
+        </div>
+        <br>
+        <div class="well">
+          <fieldset id="publisher_criteria">
+            <legend>Publisher</legend>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="All" id="all_publisher">
+                <span>All</span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="European Commission, Joint Research Centre (JRC)">
+                <span>European Commission, Joint Research Centre (JRC)<span>
+              </label>
+            </div>
+            
+          </fieldset>
+        </div>
+        <div class="well">
+          <fieldset id="type_criteria">
+            <legend>Type</legend>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="All" id="all_type">
+                <span>All</span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Desktop research">
+                <span>Desktop research<span>
+              </label>
+            </div>
+            
+          </fieldset>
+        </div>
+    </aside>
+
+<!-- /.col-md-3 -->
+    <section class="col-md-9">
+      <div class="row">
+        <div class="content col-md-12">
+          <div id="pagination" class="pagination col-md-9"></div>
+          <div class="col-md-3 content">
+            Per Page: <span id="per_page" class="content"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalogs row col-md-12" id="catalogs"> </div>
+      
+    </section>
+<!-- /.col-md-9 -->
+</article>
+<footer>
+<p></p></footer>
+<!-- /.container -->
+      <script id="catalog-template" type="text/html">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><a href="./<%= c_id %>.html"><%= c_name %></a></h4>
+          </div>
+          <div class="panel-body">
+            <p><%= c_description %></p>
+          </div>
+          <div class="panel-footer">
+            <p>
+          </div>
+        </div>
+      </div>
+      </script>
+<!--
+            <dl>
+              <dt>Category</dt>
+              <dd><%= category %></dd>
+              <dt>Geographic extent</dt>
+              <dd><%= geoextent %></dd>
+              <dt>Primary environmental domain</dt>
+              <dd><%= environmental_domain %></dd>
+              <dt>Primary environmental field</dt>
+              <dd><%= environmental_field %></dd>
+            </dl>
+-->
+<!--
+      <script id="publisher-template" type="text/html">
+        <div class="checkbox" fjs-criteria="field=c_publisher,ele=#publishers input:checkbox">
+          <label>
+            <input type="checkbox" value="<%= c_publisher %>"> <%= c_publisher %>
+          </label>
+        </div>
+      </script>
+      <script id="type-template" type="text/html">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="<%= c_type %>"> <%= c_type %>
+          </label>
+        </div>
+      </script>
+-->      
+    </body>
+  </html>

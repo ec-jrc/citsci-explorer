@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CitSci-X - Exploring Citizen Science projects</title>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="http://jiren.github.io/filter.js/assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://jiren.github.io/filter.js/assets/css/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.3/jquery-jvectormap.min.css" crossorigin="anonymous" />
+<link href="/citsci-explorer/css/common.css" media="screen" rel="stylesheet" type="text/css">
+<script src="/citsci-explorer/data/projects.js"></script>
+<script src="http://jiren.github.io/filter.js/assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="http://jiren.github.io/filter.js/assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+<script src="http://jvectormap.com/js/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="http://jvectormap.com/js/jquery-jvectormap-world-mill.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/citsci-explorer/js/common.js"></script> 
+<style>
+#citsci-view {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+</style>
+<script>
+$(document).ready(function () {
+  var countries = _.map(projects, function (p) {
+    return p.geocoverage_codes;
+  });
+  countries = _.flatten(countries);
+  countries = _.groupBy(countries);
+  var data = {};
+  _.each(countries, function (v, k) {
+    data[k] = _.size(v);
+  }, data);
+
+  $('#citsci-view').vectorMap({
+    map: 'world_mill',
+    zoomOnScroll: false,
+    zoomButtons: false,
+    regionsSelectable: false,
+    regionStyle: {
+      hover: {
+        cursor: 'default'
+      }
+    },    
+    series: {
+      regions: [{
+        values: data,
+        scale: ['#C8EEFF', '#0071A4'],
+        normalizeFunction: 'polynomial'
+      }]
+    },
+    onRegionTipShow: function (e, el, code) {
+      el.html(el.html() + ' - Projects: ' + (data[code] ? data[code] : 'unknown') );
+    },
+    onRegionClick: function(e, code){
+      window.location.href = window.location.href + 'project';
+    }
+  });
+});
+</script>
+</head>
+
+<body>
+
+<nav role="navigation" class="navbar navbar-default">
+<div class="container">
+<p class="navbar-header"><a class="navbar-brand" href="/citsci-explorer/">CitSci-X</a></p>
+<ul class="nav navbar-nav collapse navbar-collapse">
+<li class=""><a href="/citsci-explorer/project/">Projects</a></li>
+<li class=""><a href="/citsci-explorer/chart/">Gallery</a></li>
+<li class=""><a href="/citsci-explorer/catalog/">Sources</a></li>
+</ul>
+<ul class="nav navbar-nav collapse navbar-collapse navbar-right">
+<li><a target="_blank" href="https://github.com/ec-jrc/citsci-explorer/" title="GitHub"><i class="fa fa-github"></i> About CitSci-X</a></li>
+</ul>
+</div>
+</nav>
+    
+
+<header class="page-header">
+<div class="container">
+<h1 class="title">CitSci-X</h1>
+<p class="lead">Exploring Citizen Science projects</p>
+</div>
+</header>
+
+<div id="citsci-view"></div>
+        
+<article class="container">
+<div class="row thumbnails-container">
+<a class="col-sm-6 col-md-4 block-link" href="/citsci-explorer/project/">
+<div class="thumbnail">
+<div class="img"><span class="fa fa-group"></span></div>
+<div class="caption">
+<h3>Projects</h3>
+<p>Explore the citizen science projects collected by our partners and us. Find past and current projects addressing different domains, participatory approaches, etc. Discover their relationships to the Sustainable Development Goals, and much more.</p>
+</div>
+</div>
+</a>
+<a class="col-sm-6 col-md-4 block-link" href="/citsci-explorer/chart/">
+<div class="thumbnail">
+<div class="img"><span class="fa fa-area-chart"></span></div>
+<div class="caption">
+<h3>Gallery</h3>
+<p>Enjoy graphic representations of citizen science projects based on their core characteristics, including geographic and thematic coverage, policy uptake and policy relevance. Browse the already prepared views, and create dynamic visualizations yourself.</p>
+</div>
+</div>
+</a>
+<a class="col-sm-6 col-md-4 block-link" href="/citsci-explorer/catalog/">
+<div class="thumbnail">
+<div class="img"><span class="fa fa-download"></span></div>
+<div class="caption">
+<h3>Sources</h3>
+<p>Get to know the surveys, catalogs and data sets of Citizen Science projects that are integrated here. Find out how you could add your own project, or results from a longitudinal study.</p>
+</div>
+</div>
+</a>
+<!--
+<div class="col-sm-12 col-md-12">
+<div class="thumbnail">
+<div class="caption">
+<p>These pages allow you to explore Citizen Science projects that have been collected from different partners in an integrated and harmonized way. Projects can be discovered using a text-based, as well as, a graphic-based approach. We also list the contributing partners and offer the possibility to add your own project descriptions.</p>
+</div>
+</div>
+</div>
+-->
+</div>
+</article>        
+        
+</body>
+</html>

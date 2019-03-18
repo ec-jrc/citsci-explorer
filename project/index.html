@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CitSci-X | Projects</title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="http://jiren.github.io/filter.js/assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://jiren.github.io/filter.js/assets/css/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.3/jquery-jvectormap.min.css" crossorigin="anonymous" />
+    
+    <link href="/citsci-explorer/css/common.css" media="screen" rel="stylesheet" type="text/css">    
+    <link href="/citsci-explorer/css/projects.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="http://jiren.github.io/filter.js/assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="http://jiren.github.io/filter.js/assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+    <script src="http://jiren.github.io/filter.js/filter.min.js" type="text/javascript"></script>
+
+    <script src="http://jvectormap.com/js/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="http://jvectormap.com/js/jquery-jvectormap-world-mill.js"></script>
+        
+    <script type="text/javascript" src="/citsci-explorer/js/common.js"></script>
+    <script src="/citsci-explorer/data/projects.js" type="text/javascript"></script>
+    <script src="/citsci-explorer/js/projects-map.js" type="text/javascript"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>    
+  </head>
+  <body>
+<nav role="navigation" class="navbar navbar-default">
+<div class="container">
+<p class="navbar-header"><a class="navbar-brand" href="/citsci-explorer/">CitSci-X</a></p>
+<ul class="nav navbar-nav collapse navbar-collapse">
+<li class="active"><a href="/citsci-explorer/project/">Projects</a></li>
+<li class=""><a href="/citsci-explorer/chart/">Gallery</a></li>
+<li class=""><a href="/citsci-explorer/catalog/">Sources</a></li>
+</ul>
+<ul class="nav navbar-nav collapse navbar-collapse navbar-right">
+<li><a target="_blank" href="https://github.com/ec-jrc/citsci-explorer/" title="GitHub"><i class="fa fa-github"></i> About CitSci-X</a></li>
+</ul>
+</div>
+</nav>
+<!--
+    <header class="page-header">
+      <div class="container">
+      <h1 class="title">CitSci-X</h1>
+      <p class="lead">Exploring Citizen Science projects</p>
+      </div>
+    </header>
+-->    
+    <article class="container">
+      <aside class="sidebar col-md-3">
+        <div>
+          <h4 class='col-md-6'>Projects (<span id="total_projects">0</span>)</h4>
+        </div>
+        <div>
+          <label class="sr-only" for="searchbox">Search</label>
+          <input type="text" class="form-control" id="searchbox" placeholder="Search &hellip;" autocomplete="off">
+          <span class="glyphicon glyphicon-search search-icon"></span>
+        </div>
+        <br>
+        <div class="well">
+            <fieldset id="category_criteria">
+                <legend>Category</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_category">
+                    <span>All</span>
+                  </label>
+                </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Civic science">
+                <span>Civic science<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Crowd-sourcing">
+                <span>Crowd-sourcing<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Diy engineering">
+                <span>Diy engineering<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Monitoring">
+                <span>Monitoring<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Occasional reporting">
+                <span>Occasional reporting<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Passive sensing">
+                <span>Passive sensing<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Volunteer computing">
+                <span>Volunteer computing<span>
+              </label>
+            </div>
+            
+            </fieldset>
+        </div>
+        <div class="well">
+            <fieldset id="geoextent_criteria">
+                <legend>Geographic extent</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_geoextent">
+                    <span>All</span>
+                  </label>
+                </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="City">
+                <span>City<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Global">
+                <span>Global<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Macro-regional">
+                <span>Macro-regional<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="National">
+                <span>National<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Neighborhood">
+                <span>Neighborhood<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Regional">
+                <span>Regional<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Sub-national">
+                <span>Sub-national<span>
+              </label>
+            </div>
+            
+            </fieldset>
+        </div>
+        <div class="well">
+            <fieldset id="environmental_domain_criteria">
+                <legend>Primary environmental domain</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_environmental_domain">
+                    <span>All</span>
+                  </label>
+                </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Atmospheric">
+                <span>Atmospheric<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Cross-cutting">
+                <span>Cross-cutting<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Freshwater">
+                <span>Freshwater<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Marine">
+                <span>Marine<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Terrestrial">
+                <span>Terrestrial<span>
+              </label>
+            </div>
+            
+            </fieldset>
+        </div>
+        <div class="well">
+            <fieldset id="environmental_field_criteria">
+                <legend>Primary environmental field</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_environmental_field">
+                    <span>All</span>
+                  </label>
+                </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Air quality">
+                <span>Air quality<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Animal welfare">
+                <span>Animal welfare<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Biodiversity, nature and landscapes">
+                <span>Biodiversity, nature and landscapes<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Climate">
+                <span>Climate<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Cross-cutting">
+                <span>Cross-cutting<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Efficient use of resources">
+                <span>Efficient use of resources<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Environmental health">
+                <span>Environmental health<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Environmental risks">
+                <span>Environmental risks<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Land">
+                <span>Land<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Noise">
+                <span>Noise<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Sustainable consumption and production">
+                <span>Sustainable consumption and production<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Waste">
+                <span>Waste<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Water">
+                <span>Water<span>
+              </label>
+            </div>
+            
+            </fieldset>
+        </div>
+        <div class="well">
+            <fieldset id="social_uptake_criteria">
+                <legend>Social uptake</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_social_uptake">
+                    <span>All</span>
+                  </label>
+                </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Considerable">
+                <span>Considerable<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Large">
+                <span>Large<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Very large">
+                <span>Very large<span>
+              </label>
+            </div>
+            
+            </fieldset>
+        </div>
+        <div class="well">
+            <fieldset id="policy_uptake_criteria">
+                <legend>Policy uptake</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_policy_uptake">
+                    <span>All</span>
+                  </label>
+                </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="No">
+                <span>No<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Yes">
+                <span>Yes<span>
+              </label>
+            </div>
+            
+            </fieldset>
+        </div>
+        <div class="well">
+            <fieldset id="policy_relevance_criteria">
+                <legend>Policy relevance</legend>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="All" id="all_policy_relevance">
+                    <span>All</span>
+                  </label>
+                </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Compliance assurance">
+                <span>Compliance assurance<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Early-warning">
+                <span>Early-warning<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Policy evaluation">
+                <span>Policy evaluation<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Policy implementation or monitoring">
+                <span>Policy implementation or monitoring<span>
+              </label>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="Problem definition">
+                <span>Problem definition<span>
+              </label>
+            </div>
+            
+            </fieldset>
+        </div>
+    </aside>
+
+<!-- /.col-md-3 -->
+    <section class="col-md-9">
+      <div class="row">
+        <div class="content col-md-12">
+          <div id="search-map" class="projects row col-md-12" style="height:300px;"></div>        
+          <div id="pagination" class="pagination col-md-9"></div>
+          <div class="col-md-3 content">
+            Per Page: <span id="per_page" class="content"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects row col-md-12" id="projects"> </div>
+      
+    </section>
+<!-- /.col-md-9 -->
+</article>
+<footer>
+<p></p></footer>
+<!-- /.container -->
+      <script id="project-template" type="text/html">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><a href="./<%= id %>.html"><%= name %></a></h4>
+          </div>
+          <div class="panel-body">
+            <p><%= description %></p>
+          </div>
+          <div class="panel-footer">
+<!--          
+            <p>
+              <span class="icon icon-ca" title="Category">CA</span> <%= category %> 
+              <span class="icon icon-ed" title="Primary environmental domain">ED</span> <%= environmental_domain %> 
+              <span class="icon icon-ef" title="Primary environmental field">EF</span> <%= environmental_field %> 
+              <span class="icon icon-su" title="Social uptake">SU</span> <%= social_uptake %>
+              <span class="icon icon-pr" title="Policy relevance">PR</span> <%= policy_relevance %> 
+              <span class="icon icon-pu" title="Policy uptake">PU</span> <%= policy_uptake %> 
+            </p>
+-->              
+          </div>
+        </div>
+      </div>
+      </script>
+<!--      
+      <script id="geoextent-template" type="text/html">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="<%= geoextent %>"> <%= geoextent %>
+          </label>
+        </div>
+      </script>
+-->      
+    </body>
+  </html>

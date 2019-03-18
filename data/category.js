@@ -1,0 +1,9 @@
+var category = [
+    "Civic science",
+    "Crowd-sourcing",
+    "Diy engineering",
+    "Monitoring",
+    "Occasional reporting",
+    "Passive sensing",
+    "Volunteer computing"
+]

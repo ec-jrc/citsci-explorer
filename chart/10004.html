@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CitSci-X | Gallery</title>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="http://jiren.github.io/filter.js/assets/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="http://jiren.github.io/filter.js/assets/css/jquery-ui-1.10.2.custom.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/citsci-explorer/css/common.css" media="screen" rel="stylesheet" type="text/css">
+<script src="https://unpkg.com/@jpmorganchase/perspective/build/perspective.js"></script>
+<script src="https://unpkg.com/@jpmorganchase/perspective-viewer/build/perspective.view.js"></script>
+<script src="https://unpkg.com/@jpmorganchase/perspective-viewer-hypergrid/build/hypergrid.plugin.js"></script>
+<script src="https://unpkg.com/@jpmorganchase/perspective-viewer-highcharts/build/highcharts.plugin.js"></script>
+<script src="/citsci-explorer/data/projects.js"></script>
+<script src="http://jiren.github.io/filter.js/assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="http://jiren.github.io/filter.js/assets/js/jquery-ui-1.10.2.custom.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="/citsci-explorer/js/common.js"></script> 
+<style>
+#chart-10004 {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+</style>
+<script>
+$(document).ready(function () {
+  document.addEventListener("WebComponentsReady", function () {
+    var element = document.getElementById("chart-10004");
+    element.load(projects);
+    element._toggle_config();
+  });
+});
+</script>
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default">
+<div class="container">
+<p class="navbar-header"><a class="navbar-brand" href="/citsci-explorer/">CitSci-X</a></p>
+<ul class="nav navbar-nav collapse navbar-collapse">
+<li class=""><a href="/citsci-explorer/project/">Projects</a></li>
+<li class="active"><a href="/citsci-explorer/chart/">Gallery</a></li>
+<li class=""><a href="/citsci-explorer/catalog/">Sources</a></li>
+</ul>
+<ul class="nav navbar-nav collapse navbar-collapse navbar-right">
+<li><a target="_blank" href="https://github.com/ec-jrc/citsci-explorer/" title="GitHub"><i class="fa fa-github"></i> About CitSci-X</a></li>
+</ul>
+</div>
+</nav>
+<perspective-viewer view="sunburst" row-pivots='["environmental_domain", "environmental_field"]' sort='[["id", "asc"]]' columns='["id", "geocoverage"]' id="chart-10004"></perspective-viewer></body>
+</html>

@@ -1,0 +1,15 @@
+.thumbnails-container {margin-top:50px;}
+.thumbnails-container a.block-link {text-decoration:none;}
+.thumbnail {border-radius:4px;min-height:300px;}
+.thumbnail .img {text-align:center;margin:20px;}
+.thumbnail .img .fa {font-size:60px;color:#555;}
+a > .thumbnail {opacity:0.7;}
+a:hover > .thumbnail {opacity:1.0;}
+
+#table-unsdg {width:100%;}
+#table-unsdg th {padding:2px;}
+#table-unsdg td {margin-left:5px solid #ffffff;border-right:5px solid #ffffff;}
+#table-unsdg td.filled {background-color:#00ff00;}
+.unsdg-direct, .unsdg-indirect {padding:4px;font-weight:bold;text-align:center;cursor:help;}
+.unsdg-direct {background-color:#0000ff;color:#ffffff;}
+.unsdg-indirect {background-color:#ffff00;}
