@@ -1,5 +1,5 @@
 $(document).ready(function () {
-console.log(projects)
+
   //configuring JVecorMap
   var countries = _.map(projects, function (p) {
       return p.geocoverage_codes;
