@@ -43,8 +43,8 @@
 ';
 
     if ($sv["lib"] == "jvectormap") {
-      $html .= '<script src="http://jvectormap.com/js/jquery-jvectormap-2.0.3.min.js"></script>
-<script src="http://jvectormap.com/js/jquery-jvectormap-world-mill.js"></script>
+      $html .= '<script src="' . $site_abs_path . 'js/jvectormap.com/js/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="' . $site_abs_path . 'js/jvectormap.com/js/jquery-jvectormap-world-mill.js"></script>
 ';
     }
 
