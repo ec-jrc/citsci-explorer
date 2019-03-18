@@ -39,7 +39,7 @@
 */   
   $section["chart"]["name"] = "Gallery";
   $section["chart"]["icon"] = "fa-area-chart";
-  $section["chart"]["descr"] = "Enjoy graphic representations of citizen science projects based on their core characteristics, including geographic and thematic coverage, policy uptake and policy relevance. Browse the already prepared views, and create dynamic visualizations yourself.";
+  $section["chart"]["descr"] = "Enjoy graphic representations of citizen science projects based on their core characteristics, including geographic and thematic coverage, policy uptake and policy relevance. Browse the already prepared views, and create dynamic visualizations.";
   $section["chart"]["url"] = $site_abs_path . "chart/";
   $section["chart"]["path"] = $root_abs_path . "chart/";
 
