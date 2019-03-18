@@ -33,14 +33,14 @@ One the two CSV files are ready, you can create a pull request to the `src` fold
 The title and/or description of the pull request must include a reference to the issue you have previously created.
 
 The two files to be submitted should ideally encoded in UTF-8, and they must have a file name following the pattern:
-- `[N]-[name]-catalog.csv`
-- `[N]-[name]-projects.csv`
+- `[N]-catalog-[name].csv`
+- `[N]-projects-[name].csv`
 
 where "N" is an integer, and "name" is the abbreviation of your data source. 
 
 Note that "N" and "name" should correspond to the same values in both files - e.g.:
-- `1-citsci-catalog.csv`
-- `1-citsci-projects.csv`
+- `1-catalog-citsci.csv`
+- `1-projects-citsci.csv`
 
 The value of "N" must be incremental to the ones used in the already contributed data sources in folder `src`.
 
