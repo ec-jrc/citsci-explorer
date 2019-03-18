@@ -34,13 +34,13 @@ The title and/or description of the pull request must include a reference to the
 
 The two files to be submitted should ideally encoded in UTF-8, and they must have a file name following the pattern:
 - `[N]-[name]-catalog.csv`
-- `[N]-[name]-project.csv`
+- `[N]-[name]-projects.csv`
 
 where "N" is an integer, and "name" is the abbreviation of your data source. 
 
 Note that "N" and "name" should correspond to the same values in both files - e.g.:
 - `1-citsci-catalog.csv`
-- `1-citsci-project.csv`
+- `1-citsci-projects.csv`
 
 The value of "N" must be incremental to the ones used in the already contributed data sources in folder `src`.
 
@@ -81,6 +81,11 @@ The value of "N" must be incremental to the ones used in the already contributed
 <td><code>c_publisher</code></td>
 <td>free text</td>
 <td>The name of the organization who published / released the data source</td>
+</tr>
+<tr>
+<td><code>c_type</code></td>
+<td><code>Desk research</code>, <code>Online survey</code></td>
+<td>The way project records have been collected</td>
 </tr>
 </tbody>
 </table>
