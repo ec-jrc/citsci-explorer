@@ -210,7 +210,7 @@ knowledge:</p>
 <tr>
 <td><code>sdg1</code>, ..., <code>sdg17</code></td>
 <td>One of these values: <code>0</code> (No impact), <code>1</code> (Indirect impact), <code>2</code> (Direct impact)</td>
-<td>Level on impact on each of <a href="https://sustainabledevelopment.un.org/sdgs">the 17 UN Sustainable Development Goals</a>.</td>
+<td>Level of impact on each of <a href="https://sustainabledevelopment.un.org/sdgs">the 17 UN Sustainable Development Goals</a>.</td>
 </tr>
 </tbody>
 </table>
