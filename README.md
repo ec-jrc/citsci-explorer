@@ -1,14 +1,14 @@
 # Welcome to the Citizen Science Project Explorer!
 
-The Citizen Science Project Explorer (CitSci-X) is an exercise to provide an integrated view of the existing citizen projects, and to derive statistical data from them.
+The Citizen Science Project Explorer (CitSci-X) is an exercise to provide an integrated view of existing citizen projects, and to derive statistical data from them.
 
-Project records are collected from voluntarily contributed data sources (e.g., surveys, catalogs, datasets), which are harmonised into a common data schema - nothing complicated, just a flat list of attributes, as the name and description of the project, the geographic area covered, its social and policy uptake (if any).
+Project records are collected from voluntarily contributed data sources (e.g., surveys, catalogs, datasets, etc.), which are harmonised into a common data schema - nothing complicated, just a flat list of attributes, as the name and description of the project, the geographic area covered, its social and policy uptake - if any.
 
 If you are interested in contributing, please follow the instructions outlined in the following section.
 
 # How to contribute
 
-Contributions must be submitted via pull requests (PR) to this repository. The data must be submitted as a CSV (Comma-Separated Values) files, whose columns must have specific names and values. 
+Contributions must be submitted via pull requests (PR) to this repository. The data must be submitted as a CSV (Comma-Separated Values) files, whose columns must have specific names and values.
 
 The submission steps are the following ones:
 
