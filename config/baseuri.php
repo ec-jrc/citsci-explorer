@@ -1,5 +1,5 @@
 <?php
 
-  $baseuri = "http://purl.otg/citsci-x/";
+  $baseuri = "http://purl.org/citsci-x/";
 
 ?>

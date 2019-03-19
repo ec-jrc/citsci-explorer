@@ -63,6 +63,14 @@ $(document).ready(function () {
 
   $('<?php echo join(",",$chart_lib["jvectormap"])?>').vectorMap({
     map: 'world_mill',
+    zoomOnScroll: false,
+    zoomButtons: false,
+    regionsSelectable: false,
+    regionStyle: {
+      hover: {
+        cursor: 'help'
+      }
+    },    
     series: {
       regions: [{
         values: data,
@@ -74,7 +82,7 @@ $(document).ready(function () {
       el.html(el.html() + ' - Projects: ' + (data[code] ? data[code] : 'unknown') );
     },
     onRegionClick: function(e, code){
-      window.location.href = window.location.href + 'project';
+//      window.location.href = window.location.href + 'project';
     }
   });
 <?php } ?>

@@ -39,6 +39,14 @@ var countries = _.map(projects, function (p) {
 
   $("#chart-10001").vectorMap({
     map: "world_mill",
+    zoomOnScroll: false,
+    zoomButtons: false,
+    regionsSelectable: false,
+    regionStyle: {
+      hover: {
+        cursor: "help"
+      }
+    }, 
     series: {
       regions: [{
         values: data,
@@ -50,7 +58,7 @@ var countries = _.map(projects, function (p) {
       el.html(el.html() + " - Projects: " + (data[code] ? data[code] : "unknown") );
     },
     onRegionClick: function(e, code){
-      window.location.href = window.location.href + "project";
+//      window.location.href = window.location.href + "project";
     }
   });
 });

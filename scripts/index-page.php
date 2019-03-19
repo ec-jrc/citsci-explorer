@@ -56,7 +56,7 @@ $(document).ready(function () {
     regionsSelectable: false,
     regionStyle: {
       hover: {
-        cursor: 'default'
+        cursor: 'help'
       }
     },    
     series: {
