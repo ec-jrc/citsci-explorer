@@ -46,6 +46,12 @@ The value of "N" must be incremental to the ones used in the already contributed
 
 # Data schema
 
+The following sections illustrate the fields to be used in the CSV files to be submitted.
+
+
+> :information_source: Whenever possible, the field name links to the corresponding term in the [Citizen Science Ontology](https://ec-jrc.github.io/citsci-ontology/prj/) (under development).
+
+
 ## Data source
 
 <table>
@@ -102,27 +108,27 @@ The value of "N" must be incremental to the ones used in the already contributed
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
+<td><a href="https://ec-jrc.github.io/citsci-ontology/prj/#project-guid"><code>id</code></a></td>
 <td>integer</td>
 <td>The identifier for the project in the data source, expressed an an integer (starting from 1). In case of multiple submission of the same data source (in case there was an error, or because it has been updated), the identifier MUST NOT CHANGE across the different versions of the data source</td>
 </tr>
 <tr>
-<td><code>name</code></td>
+<td><a href="https://ec-jrc.github.io/citsci-ontology/prj/#project-name"><code>name</code></a></td>
 <td>free text</td>
 <td>Name of the project/activity</td>
 </tr>
 <tr>
-<td><code>description</code></td>
+<td><a href="https://ec-jrc.github.io/citsci-ontology/prj/#project-description"><code>description</code></a></td>
 <td>free text</td>
 <td>A brief description of the project</td>
 </tr>
 <tr>
-<td><code>contact</code></td>
+<td><a href="https://ec-jrc.github.io/citsci-ontology/prj/#contact-point"><code>contact</code></a></td>
 <td>email or URL</td>
 <td>A contact email / URL for the project</td>
 </tr>
 <tr>
-<td><code>url</code></td>
+<td><a href="https://ec-jrc.github.io/citsci-ontology/prj/#project-url"><code>url</code></a></td>
 <td>URL</td>
 <td>The URL of the page of the project (if any). Preferably, this should be a persistent URL. E.g., for projects funded by the EU Framework Program (FP7, H2020, Horizon Europe), it is recommended to point to the relevant page on CORDIS.</td>
 </tr>
@@ -142,7 +148,7 @@ The value of "N" must be incremental to the ones used in the already contributed
 <td>The spatial scale at which the project is implemented. Subnational is used as generic category for projects for which the sub-national scale is not known (i.e. regional, or city, or neighborhood). All regional, city and neighborhood projects are also sub-national projects.</td>
 </tr>
 <tr>
-<td><code>geocoverage</code></td>
+<td><a href="https://ec-jrc.github.io/citsci-ontology/prj/#sec-project-geography"><code>geocoverage</code></a></td>
 <td>Comma-separated list of ISO 3166 country names</td>
 <td>The areas covered by the project (typically corresponding to the countries involved in the project team/consortium), specified as a comma-separated list of country names. Country names MUST correspond to those defined in ISO 3166</td>
 </tr>
