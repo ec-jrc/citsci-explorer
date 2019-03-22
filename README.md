@@ -1,6 +1,6 @@
 # Welcome to the Citizen Science Project Explorer!
 
-The Citizen Science Project Explorer (CitSci-X) is an exercise to provide an integrated view of existing citizen projects, and to derive statistical data from them.
+The Citizen Science Project Explorer (CitSci-X) is an exercise to provide an integrated view of existing citizen science projects, and to derive statistical data from them.
 
 Project records are collected from voluntarily contributed data sources (e.g., surveys, catalogs, datasets, etc.), which are harmonised into a common data schema - nothing complicated, just a flat list of attributes, as the name and description of the project, the geographic area covered, its social and policy uptake - if any.
 
@@ -14,7 +14,7 @@ The submission steps are the following ones:
 
 ## Creating an issue describing your contribution
 
-As a first step, you are recommended to open an issue providing a description of the data source and the projects you would like to contribute. This would help understand whether your contribution is in scope with this work, and to verify which information has been collected for the projects to be contributed.
+As a first step, you are recommended to [open an issue](https://github.com/ec-jrc/citsci-explorer/issues) providing a description of the data source and the projects you would like to contribute. This would help understand whether your contribution is in scope with this work, and to verify which information has been collected for the projects to be contributed.
 
 ## Preparing the files to be submitted
 
@@ -24,11 +24,11 @@ The submission consists of 2 CSV files:
 
 The columns and values of these files must correspond to the ones defined in the data schema. Please note that all columns not matching the defined names will be ignored.
 
-The `example` folder in this repository includes two empy CSV files with the standard column names. You can copy-paste the data there, and modify the column values (if needed) to match the allowed values.
+The [`examples` folder](https://github.com/ec-jrc/citsci-explorer/tree/master/examples) in this repository includes two empy CSV files with the standard column names. You can copy-paste the data there, and modify the column values (if needed) to match the allowed values.
 
 ## Creating a pull request
 
-One the two CSV files are ready, you can create a pull request to the `src` folder.
+Once the two CSV files are ready, you can create a pull request to [the `src` folder](https://github.com/ec-jrc/citsci-explorer/tree/master/src).
 
 The title and/or description of the pull request must include a reference to the issue you have previously created.
 
