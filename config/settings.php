@@ -93,14 +93,14 @@
   $subsection["chart"]["10004"]["graph"] = '<perspective-viewer view="sunburst" row-pivots=\'["environmental_domain", "environmental_field"]\' sort=\'[["id", "asc"]]\' columns=\'["id", "geocoverage"]\' id="chart-10004"></perspective-viewer>';
   $subsection["chart"]["10004"]["lib"] = 'perspective';
   
-  $subsection["chart"]["10005"]["name"] = "Policy uptake vs. project category";
+  $subsection["chart"]["10005"]["name"] = "Policy aims vs. project category";
   $subsection["chart"]["10005"]["icon"] = "fa-area-chart";
-  $subsection["chart"]["10005"]["descr"] = "Joint visual representation of the project policy uptake and the project category.";
+  $subsection["chart"]["10005"]["descr"] = "Joint visual representation of the project policy aims and the project category.";
 //  $subsection["chart"]["10005"]["url"] = $site_abs_path . "chart/10005.html";
 //  $subsection["chart"]["10005"]["path"] = $root_abs_path . "chart/10005.html";
 //  $subsection["chart"]["10005"]["data"] = $site_abs_path . $data_folder . "projects";
   $subsection["chart"]["10005"]["data"] = $data_path . "projects";
-  $subsection["chart"]["10005"]["graph"] = '<perspective-viewer view="sunburst" row-pivots=\'["policy_uptake", "category"]\' sort=\'[["id", "asc"]]\' columns=\'["id", "geocoverage"]\' id="chart-10005"></perspective-viewer>';
+  $subsection["chart"]["10005"]["graph"] = '<perspective-viewer view="sunburst" row-pivots=\'["policy_aims", "category"]\' sort=\'[["id", "asc"]]\' columns=\'["id", "geocoverage"]\' id="chart-10005"></perspective-viewer>';
   $subsection["chart"]["10005"]["lib"] = 'perspective';
   
   $subsection["chart"]["10006"]["name"] = "Policy relevance vs. project category";
@@ -123,14 +123,14 @@
   $subsection["chart"]["10007"]["graph"] = '<perspective-viewer view="x_bar" row-pivots=\'["social_uptake", "lead_organisation_category"]\' sort=\'[["id", "asc"]]\' columns=\'["id"]\' id="chart-10007"></perspective-viewer>';
   $subsection["chart"]["10007"]["lib"] = 'perspective';
   
-  $subsection["chart"]["10008"]["name"] = "Policy uptake vs. social uptake";
+  $subsection["chart"]["10008"]["name"] = "Policy aims vs. social uptake";
   $subsection["chart"]["10008"]["icon"] = "fa-area-chart";
-  $subsection["chart"]["10008"]["descr"] = "Joint visual representation of the project policy uptake and the project social uptake.";
+  $subsection["chart"]["10008"]["descr"] = "Joint visual representation of the project policy aims and the project social uptake.";
 //  $subsection["chart"]["10008"]["url"] = $site_abs_path . "chart/10008.html";
 //  $subsection["chart"]["10008"]["path"] = $root_abs_path . "chart/10008.html";
 //  $subsection["chart"]["10008"]["data"] = $site_abs_path . $data_folder . "projects";
   $subsection["chart"]["10008"]["data"] = $data_path . "projects";
-  $subsection["chart"]["10008"]["graph"] = '<perspective-viewer view="sunburst" row-pivots=\'["policy_uptake", "social_uptake"]\' sort=\'[["id", "asc"]]\' columns=\'["id", "start_date"]\' id="chart-10008"></perspective-viewer>';
+  $subsection["chart"]["10008"]["graph"] = '<perspective-viewer view="sunburst" row-pivots=\'["policy_aims", "social_uptake"]\' sort=\'[["id", "asc"]]\' columns=\'["id", "start_date"]\' id="chart-10008"></perspective-viewer>';
   $subsection["chart"]["10008"]["lib"] = 'perspective';
 
   foreach ($subsection["chart"] as $ssk => $ssv) {

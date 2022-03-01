@@ -4,8 +4,8 @@
   require_once("../config/baseuri.php");
   require_once("../config/folders.php");
 
-//  $src[1] = "../src/citsci.csv";
-//  $src[1] = "../src/1-projects-citsci.csv";
+  $src[1] = "../src/citsci.csv";
+  $src[1] = "../src/1-projects-citsci.csv";
 
   $target_folder = $norm_folder;
 
@@ -62,36 +62,36 @@
 //    var_dump($v);
     
     $output[$k]["cid"] = $catalog_id;
-    if (isset($v["id"]) && trim($v["id"]) != '' && is_int($v["id"] + 0)) {
-      $output[$k]["id"] = $v["id"] + $n;
+    if (isset($v["UID"]) && trim($v["UID"]) != '' && is_int($v["UID"] + 0)) {
+      $output[$k]["id"] = $v["UID"] + $n;
     }
     else {
       echo "WARNING - Record " . $rn . ": Missing ID or using an ID which is not an integer. ID now assigned by the system.\n";
       $output[$k]["id"] = $rn + $n;
     }
-    if (isset($v["name"]) && trim($v["name"])) {
-      $output[$k]["name"] = trim($v["name"]);
+    if (isset($v["Name"]) && trim($v["Name"])) {
+      $output[$k]["name"] = trim($v["Name"]);
     }
     else {
       echo "ERROR - Record " . $rn . ": Mandatory field missing: 'name'\n";
       exit;
     }
-    $output[$k]["url"] = $v["url"];
-    if (filter_var(trim($v["contact"]), FILTER_VALIDATE_EMAIL)) {
-      $output[$k]["contact"] = "mailto:" . trim($v["contact"]);
+    $output[$k]["url"] = $v["Website"];
+    if (filter_var(trim($v["Contact"]), FILTER_VALIDATE_EMAIL)) {
+      $output[$k]["contact"] = "mailto:" . trim($v["Contact"]);
     }
     else {
-      if (filter_var(trim($v["contact"]), FILTER_VALIDATE_URL)) {
-        $output[$k]["contact"] = trim($v["contact"]);
+      if (filter_var(trim($v["Contact"]), FILTER_VALIDATE_URL)) {
+        $output[$k]["contact"] = trim($v["Contact"]);
       }
       else {
         $output[$k]["contact"] = "";
       }
     }
-    $output[$k]["description"] = trim($v["description"]);
-    $output[$k]["geoextent"] = trim($v["geoextent"]);
+    $output[$k]["description"] = trim($v["Brief description"]);
+    $output[$k]["geoextent"] = trim($v["Geographical extent"]);
 //    $output[$k]["geocoverage"] = $v["geocoverage_dirty"];
-    $output[$k]["geocoverage"] = array_map('trim', explode(',', $v["geocoverage"]));
+    $output[$k]["geocoverage"] = array_map('trim', explode(',', $v["Geographic coverage"]));
 
     $output[$k]["geocoverage_codes"] = array();
     foreach ($output[$k]["geocoverage"] as $gk => $gn) {
@@ -102,37 +102,38 @@
       }
     }
 
-    $output[$k]["lead_organisation"]["name"] = trim($v["lead_organisation_name"]);
-    $output[$k]["lead_organisation"]["category"] = trim($v["lead_organisation_category"]);
-    $output[$k]["lead_organisation_name"] = trim($v["lead_organisation_name"]);
-    $output[$k]["lead_organisation_category"] = trim($v["lead_organisation_category"]);
-    $output[$k]["start_date"] = trim($v["start_date"]);
-    $output[$k]["active"] = trim($v["active"]);
-    $output[$k]["end_date"] = trim($v["end_date"]);
-    $output[$k]["environmental_domain"] = ucfirst(mb_strtolower(trim($v["environmental_domain"])));
-    $output[$k]["environmental_field"] = ucfirst(mb_strtolower(trim($v["environmental_field"])));
-    $output[$k]["category"] = ucfirst(mb_strtolower(trim($v["category"])));
-    $output[$k]["social_uptake"] = ucfirst(mb_strtolower(trim($v["social_uptake"])));
-    $output[$k]["policy_uptake"] = ucfirst(mb_strtolower(trim($v["policy_uptake"])));
-    $output[$k]["policy_uptake_explanation"] = trim($v["policy_uptake_explanation"]);
-    $output[$k]["policy_relevance"] = ucfirst(mb_strtolower(trim($v["policy_relevance"])));
-    $output[$k]["unsdg"][1]  = $v["sdg1"];
-    $output[$k]["unsdg"][2]  = $v["sdg2"];
-    $output[$k]["unsdg"][3]  = $v["sdg3"];
-    $output[$k]["unsdg"][4]  = $v["sdg4"];
-    $output[$k]["unsdg"][5]  = $v["sdg5"];
-    $output[$k]["unsdg"][6]  = $v["sdg6"];
-    $output[$k]["unsdg"][7]  = $v["sdg7"];
-    $output[$k]["unsdg"][8]  = $v["sdg8"];
-    $output[$k]["unsdg"][9]  = $v["sdg9"];
-    $output[$k]["unsdg"][10] = $v["sdg10"];
-    $output[$k]["unsdg"][11] = $v["sdg11"];
-    $output[$k]["unsdg"][12] = $v["sdg12"];
-    $output[$k]["unsdg"][13] = $v["sdg13"];
-    $output[$k]["unsdg"][14] = $v["sdg14"];
-    $output[$k]["unsdg"][15] = $v["sdg15"];
-    $output[$k]["unsdg"][16] = $v["sdg16"];
-    $output[$k]["unsdg"][17] = $v["sdg17"];
+    $output[$k]["lead_organisation"]["name"] = trim($v["Lead organisation name"]);
+    $output[$k]["lead_organisation"]["category"] = trim($v["Lead organisation category"]);
+    $output[$k]["lead_organisation_name"] = trim($v["Lead organisation name"]);
+    $output[$k]["lead_organisation_category"] = trim($v["Lead organisation category"]);
+    $output[$k]["start_date"] = trim($v["Start year"]);
+    $output[$k]["active"] = trim($v["Still active"]);
+    $output[$k]["end_date"] = trim($v["End year"]);
+    $output[$k]["environmental_domain"] = ucfirst(mb_strtolower(trim($v["Primary environmental domain"])));
+    $output[$k]["environmental_field"] = ucfirst(mb_strtolower(trim($v["Primary environmental field"])));
+    $output[$k]["category"] = ucfirst(mb_strtolower(trim($v["Primary category of project"])));
+    $output[$k]["social_uptake"] = ucfirst(mb_strtolower(trim($v["Social uptake"])));
+    $output[$k]["policy_aims"] = ucfirst(mb_strtolower(trim($v["Policy aims"])));
+    $output[$k]["policy_aims_explanation"] = trim($v["Policy aims explanation"]);
+    $output[$k]["policy_relevance"] = ucfirst(mb_strtolower(trim($v["Policy relevance"])));
+    $output[$k]["unsdg"][1]  = $v["SDG 1 - Poverty"];
+    $output[$k]["unsdg"][2]  = $v["SDG 2 - Food, sustainable agriculture"];
+    $output[$k]["unsdg"][3]  = $v["SDG 3 - Health and well-being"];
+    $output[$k]["unsdg"][4]  = $v["SDG 4 - Education"];
+    $output[$k]["unsdg"][5]  = $v["SDG 5 - Gender equality"];
+    $output[$k]["unsdg"][6]  = $v["SDG 6 - Water availability and sustainable management"];
+    $output[$k]["unsdg"][7]  = $v["SDG 7 - Energy affordable, reliable, sustainable"];
+    $output[$k]["unsdg"][8]  = $v["SDG 8 - Sustainable economic growth and employment"];
+    $output[$k]["unsdg"][9]  = $v["SDG 9 - Resilient infrastructure, innovation"];
+    $output[$k]["unsdg"][10] = $v["SDG 10 - Reduce inequality"];
+    $output[$k]["unsdg"][11] = $v["SDG 11 - Sustainable, resilient cities/settlements"];
+    $output[$k]["unsdg"][12] = $v["SDG 12 - Sustainable consumption and production"];
+    $output[$k]["unsdg"][13] = $v["SDG 13 - Action to combat climate change and its impacts"];
+    $output[$k]["unsdg"][14] = $v["SDG 14 - Marine conservation and sustainable development"];
+    $output[$k]["unsdg"][15] = $v["SDG 15 - Terrestrial biodiversity conservation, sustainable forest management and land use management"];
+    $output[$k]["unsdg"][16] = $v["SDG 16 - Peace, justice for all"];
+    $output[$k]["unsdg"][17] = $v["SDG 17 - Strengthen Global Partnership for Sustainable Development"];
+	$output[$k]["source"] = $v["Source"];
     
     $rn++;
 

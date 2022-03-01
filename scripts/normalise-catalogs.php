@@ -116,8 +116,8 @@
     $output[$k]["environmental_field"] = ucfirst(mb_strtolower(trim($v["environmental_field"])));
     $output[$k]["category"] = ucfirst(mb_strtolower(trim($v["category"])));
     $output[$k]["social_uptake"] = ucfirst(mb_strtolower(trim($v["social_uptake"])));
-    $output[$k]["policy_uptake"] = ucfirst(mb_strtolower(trim($v["policy_uptake"])));
-    $output[$k]["policy_uptake_explanation"] = trim($v["policy_uptake_explanation"]);
+    $output[$k]["policy_aims"] = ucfirst(mb_strtolower(trim($v["policy_aims"])));
+    $output[$k]["policy_aims_explanation"] = trim($v["policy_aims_explanation"]);
     $output[$k]["policy_relevance"] = ucfirst(mb_strtolower(trim($v["policy_relevance"])));
     $output[$k]["unsdg"][1]  = $v["sdg1"];
     $output[$k]["unsdg"][2]  = $v["sdg2"];

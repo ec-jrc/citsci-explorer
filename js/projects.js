@@ -41,13 +41,13 @@ $(document).ready(function(){
       }
       c.next().text(c.val() + ' (' + count + ')')
     });
-    var checkboxes  = $("#policy_uptake_criteria :input:gt(0)");
+    var checkboxes  = $("#policy_aims_criteria :input:gt(0)");
 
     checkboxes.each(function(){
       var c = $(this), count = 0
 
       if(result.length > 0){
-        count = jQ.where({ 'policy_uptake': c.val() }).count;
+        count = jQ.where({ 'policy_aims': c.val() }).count;
       }
       c.next().text(c.val() + ' (' + count + ')')
     });
@@ -58,6 +58,16 @@ $(document).ready(function(){
 
       if(result.length > 0){
         count = jQ.where({ 'policy_relevance': c.val() }).count;
+      }
+      c.next().text(c.val() + ' (' + count + ')')
+    });
+    var checkboxes  = $("#source_criteria :input:gt(0)");
+
+    checkboxes.each(function(){
+      var c = $(this), count = 0
+
+      if(result.length > 0){
+        count = jQ.where({ 'source': c.val() }).count;
       }
       c.next().text(c.val() + ' (' + count + ')')
     });
@@ -129,8 +139,9 @@ $(document).ready(function(){
   FJS.addCriteria({field: 'category', ele: '#category_criteria input:checkbox'});
   FJS.addCriteria({field: 'geoextent', ele: '#geoextent_criteria input:checkbox'});
   FJS.addCriteria({field: 'social_uptake', ele: '#social_uptake_criteria input:checkbox'});
-  FJS.addCriteria({field: 'policy_uptake', ele: '#policy_uptake_criteria input:checkbox'});
+  FJS.addCriteria({field: 'policy_aims', ele: '#policy_aims_criteria input:checkbox'});
   FJS.addCriteria({field: 'policy_relevance', ele: '#policy_relevance_criteria input:checkbox'});
+  FJS.addCriteria({field: 'source', ele: '#source_criteria input:checkbox'});
   FJS.addCriteria({field: 'environmental_domain', ele: '#environmental_domain_criteria input:checkbox'});
   FJS.addCriteria({field: 'environmental_field', ele: '#environmental_field_criteria input:checkbox'});
 
@@ -183,14 +194,18 @@ function initSliders(){
   $('#all_social_uptake').on('click', function(){
     $('#social_uptake_criteria :checkbox').prop('checked', $(this).is(':checked'));
   });
-  $('#policy_uptake_criteria :checkbox').prop('checked', true);
-  $('#all_policy_uptake').on('click', function(){
-    $('#policy_uptake_criteria :checkbox').prop('checked', $(this).is(':checked'));
+  $('#policy_aims_criteria :checkbox').prop('checked', true);
+  $('#all_policy_aims').on('click', function(){
+    $('#policy_aims_criteria :checkbox').prop('checked', $(this).is(':checked'));
   });
   $('#policy_relevance_criteria :checkbox').prop('checked', true);
   $('#all_policy_relevance').on('click', function(){
     $('#policy_relevance_criteria :checkbox').prop('checked', $(this).is(':checked'));
   });
+  $('#source_criteria :checkbox').prop('checked', true);
+  $('#all_source').on('click', function(){
+    $('#source_criteria :checkbox').prop('checked', $(this).is(':checked'));
+  });  
   $('#environmental_domain_criteria :checkbox').prop('checked', true);
   $('#all_environmental_domain').on('click', function(){
     $('#environmental_domain_criteria :checkbox').prop('checked', $(this).is(':checked'));

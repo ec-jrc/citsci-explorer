@@ -50,8 +50,8 @@
 //    $environmental_field = $v["environmental_field"];
 //    $category = $v["category"];
 //    $social_uptake = $v["social_uptake"];
-//    $policy_uptake = $v["policy_uptake"];
-//    $policy_uptake_explanation = $v["policy_uptake_explanation"];
+//    $policy_aims = $v["policy_aims"];
+//    $policy_uptake_explanation = $v["policy_aims_explanation"];
 //    $policy_relevance = $v["policy_relevance"];
 /*
     $unsdg[1]  = $v["unsdg"][1];
@@ -268,7 +268,7 @@ $(document).ready(function() {
 <p>' . $environmental_field . '</p>
 <p><strong>Social uptake</strong></p>
 <p>' . $social_uptake . '</p>
-<p><strong>Policy uptake</strong></p>
+<p><strong>Policy aims</strong></p>
 <p>' . $policy_uptake . '</p>
 <p><strong>Policy relevance</strong></p>
 <p>' . $policy_relevance . '</p>
@@ -285,7 +285,7 @@ $(document).ready(function() {
 /*
 if ($policy_uptake == 'Yes') {
   $html .= '<section>
-<h3>Policy uptake explanation</h3>
+<h3>Policy aims explanation</h3>
 <p>' . $policy_uptake_explanation . '</p>
 ';
 }

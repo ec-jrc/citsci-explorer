@@ -40,8 +40,9 @@
   $field[] = "environmental_domain";
   $field[] = "environmental_field";
   $field[] = "social_uptake";
-  $field[] = "policy_uptake";
+  $field[] = "policy_aims";
   $field[] = "policy_relevance";
+  $field[] = "source";
 
   $file = $target_folder . $filename . ".json";
   $records = json_decode(file_get_contents($file), true);

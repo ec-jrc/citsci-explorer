@@ -11,8 +11,9 @@
   $fn[] = "environmental_domain";
   $fn[] = "environmental_field";
   $fn[] = "social_uptake";
-  $fn[] = "policy_uptake";
+  $fn[] = "policy_aims";
   $fn[] = "policy_relevance";
+  $fn[] = "source";
   
   $records = json_decode(file_get_contents($data_folder . "projects.json"), true);
 
@@ -170,15 +171,15 @@
             </fieldset>
         </div>
         <div class="well">
-            <fieldset id="policy_uptake_criteria">
-                <legend>Policy uptake</legend>
+            <fieldset id="policy_aims_criteria">
+                <legend>Policy aims</legend>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" value="All" id="all_policy_uptake">
+                    <input type="checkbox" value="All" id="all_aims_uptake">
                     <span>All</span>
                   </label>
                 </div>
-<?php foreach ($filter["policy_uptake"] as $filter_value) { ?>            
+<?php foreach ($filter["policy_aims"] as $filter_value) { ?>            
             <div class="checkbox">
               <label>
                 <input type="checkbox" value="<?php echo $filter_value; ?>">
@@ -246,7 +247,7 @@
               <span class="icon icon-ef" title="Primary environmental field">EF</span> <%= environmental_field %> 
               <span class="icon icon-su" title="Social uptake">SU</span> <%= social_uptake %>
               <span class="icon icon-pr" title="Policy relevance">PR</span> <%= policy_relevance %> 
-              <span class="icon icon-pu" title="Policy uptake">PU</span> <%= policy_uptake %> 
+              <span class="icon icon-pu" title="Policy aims">PU</span> <%= policy_aims %> 
             </p>
 -->              
           </div>

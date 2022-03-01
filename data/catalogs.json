@@ -16,5 +16,14 @@
         "c_description": "Data collected through an online survey, to complement the environmental citizen science  project inventory that resulted from the desk research study ('Study on an inventory of citizen science activities for environmental policies') ordered by the European Commission (DG ENV, with the support of DG JRC) in order to get an evidence base of citizen science activities.",
         "c_publisher": "European Commission, Joint Research Centre (JRC)",
         "c_type": "Online survey"
+    },
+    {
+        "c_id": 10003,
+        "c_name": "Inventory of environmental citizen science projects - Annex: Irish EPA",
+        "c_url": "https:\/\/www.epa.ie\/",
+        "c_contact": "https:\/\/www.epa.ie\/who-we-are\/contact-us\/",
+        "c_description": "Data collected by the Irish Environmental Protection Agency (EPA).",
+        "c_publisher": "European Commission, Joint Research Centre (JRC)",
+        "c_type": "Irish EPA"
     }
 ]

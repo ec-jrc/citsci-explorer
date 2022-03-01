@@ -62,7 +62,7 @@ $(document).ready(function () {
     series: {
       regions: [{
         values: data,
-        scale: ['#C8EEFF', '#0071A4'],
+        scale: ['#73effb', '#57cee5', '#3faecd', '#2b8fb3','#1c7198','#10547c','#083860','#021f43'], /*['#C8EEFF', '#0071A4'],*/
         normalizeFunction: 'polynomial'
       }]
     },

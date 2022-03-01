@@ -47,8 +47,8 @@
     $environmental_field = $v["environmental_field"];
     $category = $v["category"];
     $social_uptake = $v["social_uptake"];
-    $policy_uptake = $v["policy_uptake"];
-    $policy_uptake_explanation = $v["policy_uptake_explanation"];
+    $policy_aims = $v["policy_aims"];
+    $policy_aims_explanation = $v["policy_aims_explanation"];
     $policy_relevance = $v["policy_relevance"];
     $unsdg[1]  = $v["unsdg"][1];
     $unsdg[2]  = $v["unsdg"][2];
@@ -67,6 +67,7 @@
     $unsdg[15] = $v["unsdg"][15];
     $unsdg[16] = $v["unsdg"][16];
     $unsdg[17] = $v["unsdg"][17];
+	$source = $v["source"];
     
     foreach (json_decode(file_get_contents($data_folder . "catalogs.json"), true) as $rv) {
       if ($rv["c_id"] == $cid) {
@@ -219,10 +220,12 @@ $(document).ready(function() {
 <p>' . $environmental_field . '</p>
 <p><strong>Social uptake</strong></p>
 <p>' . $social_uptake . '</p>
-<p><strong>Policy uptake</strong></p>
-<p>' . $policy_uptake . '</p>
+<p><strong>Policy aims</strong></p>
+<p>' . $policy_aims . '</p>
 <p><strong>Policy relevance</strong></p>
 <p>' . $policy_relevance . '</p>
+<p><strong>Source</strong></p>
+<p>' . $source . '</p>
 </div>
 </div>
 </aside>
@@ -233,10 +236,10 @@ $(document).ready(function() {
 </address>
 <p>' . $description . '</p>
 ';
-if ($policy_uptake == 'Yes') {
+if ($policy_aims == 'Yes') {
   $html .= '<section>
 <h3>Policy uptake explanation</h3>
-<p>' . $policy_uptake_explanation . '</p>
+<p>' . $policy_aims_explanation . '</p>
 ';
 }
   $html .= '<section>
@@ -371,8 +374,8 @@ if ($policy_uptake == 'Yes') {
       if ($social_uptake == $p["social_uptake"]) {
         $related_projects[$p["id"]]["social_uptake"] = "Yes";
       }
-      if ($policy_uptake == $p["policy_uptake"]) {
-        $related_projects[$p["id"]]["policy_uptake"] = "Yes";
+      if ($policy_aims == $p["policy_aims"]) {
+        $related_projects[$p["id"]]["policy_aims"] = "Yes";
       }
       if ($policy_relevance == $p["policy_relevance"]) {
         $related_projects[$p["id"]]["policy_relevance"] = "Yes";
@@ -435,9 +438,9 @@ if ($policy_uptake == 'Yes') {
               $tag = "SU";
               $label = "Same social uptake";
               break;
-            case "policy_uptake":
+            case "policy_aims":
               $tag = "PU";
-              $label = "Same policy uptake";
+              $label = "Same policy aims";
               break;
             case "policy_relevance":
               $label = "Same policy relevance";

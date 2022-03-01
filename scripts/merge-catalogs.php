@@ -40,7 +40,7 @@
   $field[] = "environmental_domain";
   $field[] = "environmental_field";
   $field[] = "social_uptake";
-  $field[] = "policy_uptake";
+  $field[] = "policy_aims";
   $field[] = "policy_relevance";
 
   $file = $target_folder . $filename . ".json";
